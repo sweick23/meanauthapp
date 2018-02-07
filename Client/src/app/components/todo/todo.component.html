@@ -1,0 +1,11 @@
+<h2 class="page-header">Todo List</h2>
+
+<form (submit) = "onTaskSubmit()"  >
+	<div form-group>
+<label>Add a Task: </label>
+<input type="text" class="form-control" [(ngModel)]="task" name="task">
+	</div>
+	
+<br />
+	<input type="submit" class="btn btn-primary" value="Login">
+</form>

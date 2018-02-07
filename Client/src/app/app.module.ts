@@ -17,13 +17,15 @@ import {AuthService} from './services/auth.service';
 import {FlashMessagesModule} from 'angular2-flash-messages';
 import {FlashMessagesService} from 'angular2-flash-messages';
 import {AuthGaurd} from './guards/auth.guard';
+import { TodoComponent } from './components/todo/todo.component';
 
 const appRoutes: Routes =  [
   {path:'', component: HomeComponent},
   {path:'register', component: RegisterComponent},
   {path:'login', component: LoginComponent},
   {path:'dashboard', component: DashboardComponent, canActivate: [AuthGaurd]},
-  {path:'profile', component: ProfileComponent, canActivate: [AuthGaurd]}
+  {path:'profile', component: ProfileComponent, canActivate: [AuthGaurd]},
+  {path: 'todo', component: TodoComponent, canActivate: [AuthGaurd]}
 ]
 
 @NgModule({
@@ -34,7 +36,8 @@ const appRoutes: Routes =  [
     RegisterComponent,
     HomeComponent,
     DashboardComponent,
-    ProfileComponent
+    ProfileComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
